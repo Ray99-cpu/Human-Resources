@@ -23,11 +23,59 @@
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
 
-## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+## Analysis Techniques Used  
+
+### Methods Applied  
+- **Exploratory Data Analysis (EDA):** Investigated variable distributions, outliers, and subgroup patterns using descriptive statistics and visualisations (histograms, boxplots, bar charts, heatmaps).  
+- **Correlation and Association Testing:**  
+  - Numeric ↔ Numeric: Pearson and Spearman correlation coefficients.  
+  - Binary target (**Attrition**) ↔ Numeric: Point-biserial correlation and non-parametric tests (Mann–Whitney U) when normality was not met.  
+  - Categorical ↔ **Attrition**: Chi-square tests and Cramér’s V for strength of association.  
+- **Target-based Aggregation:** Grouped data by `Attrition` to compare means and proportions (e.g., attrition rates by **OverTime** status).  
+- **Feature Transformation:** One-hot encoding for categorical variables and consolidation of rare levels to improve interpretability.  
+
+**Limitations & Alternative Approaches:**  
+- Target imbalance (far more “No” than “Yes” in `Attrition`) reduced the statistical power of certain tests.  
+  - **Alternative:** class balancing (e.g., SMOTE) for predictive modelling.  
+- High cardinality in features like `JobRole` diluted insights.  
+  - **Alternative:** logical grouping of similar categories or Weight of Evidence (WoE) encoding (with caution to prevent leakage).  
+- Potential multicollinearity between variables (e.g., `JobLevel` and `MonthlyIncome`).  
+  - **Alternative:** remove redundant features after Variance Inflation Factor (VIF) analysis.  
+
+---
+
+## Structuring the Analysis Techniques  
+
+1. **Data Loading & Cleaning** – Ensured correct data types, standardised category labels (e.g., `Travel_Rarely`), and checked for duplicates or missing values.  
+2. **Initial EDA** – Explored overall distributions and potential outliers to guide hypothesis formulation.  
+3. **Hypothesis Testing** – Applied statistical tests (Chi-square, point-biserial, Mann–Whitney) to confirm or reject initial assumptions.  
+4. **Subgroup Analysis** – Used `groupby` summaries and visualisations to compare attrition rates across departments, roles, and other key features.  
+5. **(Optional) Feature Preparation for Modelling** – Encoded categorical variables and considered balancing methods for predictive modelling.  
+
+**Justification:**  
+This sequence moves from data understanding → hypothesis generation → statistical validation → in-depth subgroup comparisons. It ensures each step builds logically on the last, avoiding data leakage and making the process reproducible.  
+
+---
+
+## Data Limitations and Workarounds  
+
+- **Single Snapshot Data:** The dataset lacks a time-series component, limiting trend analysis.  
+  - **Workaround:** focused on cross-sectional patterns and scenario simulations.  
+- **Imbalanced Target Variable:** Majority “No” in `Attrition` could obscure smaller effects.  
+  - **Workaround:** stratified visualisations and weighted insights; for models, applied balancing strategies like SMOTE.  
+- **Operational Noise:** Certain fields (e.g., `DailyRate`, `MonthlyRate`) added little interpretive value.  
+  - **Workaround:** concentrated on more explanatory variables such as `OverTime`, `JobSatisfaction`, `YearsAtCompany`, and `DistanceFromHome`.  
+- **High Cardinality in Categorical Features:**  
+  - **Workaround:** consolidated similar categories (e.g., merging niche job roles) and used normalised proportions for visual clarity.  
+
+---
+
+## Use of Generative AI for Ideation, Design Thinking, and Code Optimisation  
+
+- **Ideation:** Generated hypothesis ideas and feature combinations likely to influence attrition (e.g., “OverTime + low JobSatisfaction + short YearsAtCompany” as a high-risk profile). Suggested relevant visualisation types, such as stacked bar charts for attrition by **OverTime** and **JobLevel**.  
+- **Design Thinking & Storytelling:** Helped structure the narrative from “what” (findings) → “why” (underlying drivers) → “so what” (actionable recommendations) for both technical and non-technical audiences.  
+- **Code Optimisation:** Improved Pandas workflows by replacing slow `.apply()` loops with vectorised operations, streamlining `groupby.agg` pipelines, and creating reusable plotting functions for consistent visuals.  
+- **Documentation:** Assisted in drafting clear, concise README sections and presentation text, ensuring both technical accuracy and accessibility.  
 
 ## Ethical considerations
 * Were there any data privacy, bias or fairness issues with the data?
