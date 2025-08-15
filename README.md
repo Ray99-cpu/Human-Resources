@@ -128,18 +128,6 @@ Visuals:
 •	Trend line: Attrition rate over time.
 
 Filters:
-•	Department
-•	Job Role
-•	Education Field
-•	Marital Status
-•	Gender
-•	Overtime status
-•	Time period
-
-Insights:
-•	Predict high-risk employees using a risk scoring model from key attributes (e.g., job satisfaction, overtime, distance from home).
-•	Highlight departments with rising attrition trends.
-•	Suggest targeted retention actions such as workload adjustments, promotions, or career development opportunities.
  
 Summary Paragraph
 This HR Attrition Dashboard will enable HR managers, executives, and department leads to monitor workforce stability and proactively address employee turnover risks. By leveraging demographic, performance, and satisfaction data from the HRIS, the dashboard will provide real-time insights into attrition rates, high-risk employees, and underlying drivers such as overtime demands, job dissatisfaction, and commute distance. Through interactive visualizations, predictive analytics, and targeted insights, leadership can make data-driven decisions to improve retention, enhance employee engagement, and strengthen organizational stability.
@@ -161,7 +149,6 @@ This HR Attrition Dashboard will enable HR managers, executives, and department 
 - Target imbalance (far more “No” than “Yes” in `Attrition`) reduced the statistical power of certain tests.  
   - **Alternative:** class balancing (e.g., SMOTE) for predictive modelling.  
 - High cardinality in features like `JobRole` diluted insights.  
-  - **Alternative:** logical grouping of similar categories or Weight of Evidence (WoE) encoding (with caution to prevent leakage).  
 - Potential multicollinearity between variables (e.g., `JobLevel` and `MonthlyIncome`).  
   - **Alternative:** remove redundant features after Variance Inflation Factor (VIF) analysis.  
 
