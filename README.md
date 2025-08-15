@@ -407,8 +407,10 @@ This project implements a complete end-to-end Machine Learning workflow for pred
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+### Dataset
+- [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) from Kaggle.
+- Content and analysis support provided by ChatGPT.
+- Project guidance and facilitation by Emma (facilitator).
 
 ## Acknowledgements (optional)
 Thank you to the people who provided support through this project.
