@@ -23,8 +23,6 @@ As an HR manager, I want to see which employees are at risk of leaving, so that 
 As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
 As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
 
-* Describe your business requirements #need to add
-
 ## 1. Employee Attrition Count
 
 ![Employee Attrition Count](Business_case/plots/attrition_count.png)
@@ -93,18 +91,27 @@ This plot illustrates how long employees who left versus stayed had been at the 
 
 ## Project Plan
 The analysis followed a structured, high-level workflow to ensure accuracy, efficiency, and reproducibility. The main steps were:
+
 1.	Data Collection – The dataset was sourced from the HR Employee Attrition records, containing 1,470 entries and 35 variables covering demographics, job information, compensation, work conditions, satisfaction, and attrition status.
+
 2.	Data Loading & Management – The raw CSV file was loaded into Python using the Pandas library. During the loading phase, column names, data types, and completeness were verified. The dataset was stored in a version-controlled environment to maintain integrity throughout the analysis.
+
 3.	Data Cleaning & Preprocessing – Redundant constant columns (EmployeeCount, Over18, StandardHours) were removed. Categorical features were prepared for encoding, and numerical features were reviewed for scaling if required. No missing values were found, so imputation was not necessary.
+
 4.	Exploratory Data Analysis (EDA) – Summary statistics and visualizations were generated to understand distributions, detect outliers, and reveal patterns in the data. Special focus was given to the relationship between attrition and factors such as overtime, job role, years at the company, and income.
+
 5.	Modeling & Analysis – Machine learning models (e.g., Random Forest Classifier) were chosen to identify key drivers of attrition and predict employee turnover. The data was split into training and testing sets to evaluate performance objectively.
+
 6.	Interpretation & Insights – Model results were interpreted alongside visual analysis to identify actionable insights for HR strategy, including which factors most strongly influenced employee retention.
+
 7.	Documentation & Reporting – All code, outputs, and interpretations were documented in a structured format to ensure reproducibility and clear communication of findings.
+
 Methodology Justification:
 This methodology was chosen to balance descriptive analysis (for understanding patterns and relationships) with predictive modeling (for identifying key attrition drivers and estimating turnover risk). Using Python’s data science stack (Pandas, Seaborn, Matplotlib, and scikit-learn) ensured a reproducible, flexible, and well-supported analytical process. EDA was prioritized to guide feature selection, while supervised machine learning provided quantifiable importance metrics for decision-making.
 
 ## The rationale to map the business requirements to the Data Visualisations
-Business Requirements
+Business Requirements:
+
 General Requirements for the HR Analytics Dashboard
 User Interface & Navigation
 •	Clear dashboard header with "HR Attrition Dashboard" title and date of data refresh.
@@ -141,7 +148,6 @@ Insights:
 •	Highlight departments with rising attrition trends.
 •	Suggest targeted retention actions such as workload adjustments, promotions, or career development opportunities.
  
-Summary Paragraph
 This HR Attrition Dashboard will enable HR managers, executives, and department leads to monitor workforce stability and proactively address employee turnover risks. By leveraging demographic, performance, and satisfaction data from the HRIS, the dashboard will provide real-time insights into attrition rates, high-risk employees, and underlying drivers such as overtime demands, job dissatisfaction, and commute distance. Through interactive visualizations, predictive analytics, and targeted insights, leadership can make data-driven decisions to improve retention, enhance employee engagement, and strengthen organizational stability.
 
 
@@ -233,7 +239,6 @@ The Power BI dashboard was designed using the Balsamiq software. The main dashbo
 
 
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
 The Power BI dashboard has the following pages:
 
 
