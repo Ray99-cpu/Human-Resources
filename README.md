@@ -201,8 +201,27 @@ This sequence moves from data understanding → hypothesis generation → statis
 - **Documentation:** Assisted in drafting clear, concise README sections and presentation text, ensuring both technical accuracy and accessibility.  
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+
+1. Data Privacy under GDPR
+•	The dataset contains sensitive employment information that would be regulated under GDPR in a real-world context.
+•	Columns include salary (MonthlyIncome), performance ratings (PerformanceRating), and job history (YearsAtCompany, JobRole) — all of which are considered personal data under GDPR if linked to identifiable individuals.
+•	GDPR requires personal data to be processed lawfully, fairly, and transparently. Even without direct identifiers like names, indirect identifiers could lead to re-identification if combined with other datasets. Therefore, real-world use would require anonymization or pseudonymization, secure storage, and a clear legal basis for processing.
+ 
+2. Bias and Fairness in the Data
+•	Historical HR datasets may embed biases that could influence analysis and prediction outcomes.
+•	The dataset includes demographic attributes such as gender (Gender), age (Age), and marital status (MaritalStatus), which could correlate with attrition but also reflect systemic inequalities.
+•	If models are trained on biased historical data without intervention, they could perpetuate unfair patterns (e.g., predicting higher attrition for certain age groups or genders). To prevent this, these variables were examined during EDA to detect disproportionate attrition patterns and should be handled with fairness-aware algorithms in predictive contexts.
+ 
+3. Responsible Use of Insights
+•	Insights from the analysis should be used to improve retention strategies, not as grounds for discriminatory decisions.
+•	Predictive models can identify factors correlated with attrition, such as overtime work or low job satisfaction, but may also reveal demographic patterns.
+•	Using such findings to target specific groups for termination or exclusion would be unethical and could breach employment law. Instead, results should guide positive interventions such as workload adjustments, engagement programs, or career development opportunities.
+ 
+4. Transparency and Accountability
+•	Analytical methods and assumptions must be transparent to ensure trust and compliance.
+•	The analysis was documented step-by-step, from data loading and cleaning to model selection and evaluation.
+•	Transparency allows others to audit and replicate the findings, reducing the risk of hidden bias or unintentional misuse. This aligns with GDPR’s accountability principle and responsible AI guidelines.
+
 
 ## Dashboard Design
 
@@ -333,15 +352,8 @@ Example:
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
 
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
 
 
 
 ## Acknowledgements (optional)
-* Emma Lamont 
-* Niel
-* Spencer
-* The whole team
+* Thank the people who provided support through this project.
