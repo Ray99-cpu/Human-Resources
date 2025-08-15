@@ -2,13 +2,18 @@
 
 # Human Resources Data Analysis
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+** This project provides a clear and practical analytics platform to help Human Resources teams understand and reduce employee attrition. Using the [IBM HR Analytics Employee Attrition & Performance dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-data) from Kaggle, it uncovers the primary reasons why employees leave and helps organizations take action to retain their top talent.
 
 ## Dataset Content
 The HR Employee Attrition dataset contains 1,470 employee records and 35 variables, covering demographic details, job-related information, compensation, work conditions, satisfaction scores, and performance ratings. Demographic features include age, gender, and marital status, while job-related data captures department, job role, job level, years at the company, and time in the current role or under the current manager. Compensation is represented through monthly income, hourly and daily rates, monthly rate, stock option level, and recent salary hikes. Work conditions include business travel frequency, distance from home, overtime status, work-life balance, and training participation. Satisfaction metrics assess environment, job, and relationships, while performance ratings capture employee evaluation scores. The target variable, Attrition, indicates whether an employee has left the company. Some variables, such as EmployeeCount, Over18, and StandardHours, are constants and can be removed for analysis. The dataset is complete with no missing values, making it suitable for predictive modeling and exploratory analysis to understand factors influencing employee turnover.
 
 ## Business Requirements
-* Describe your business requirements #need to add
+The main business requirements for this project are:
+
+1. **Understand Key Drivers of Employee Attrition:** Identify the most significant factors that contribute to employees leaving the organization, such as department, gender, income, job satisfaction, and tenure.
+2. **Visualize Attrition Trends:** Provide clear, actionable dashboards that allow HR and business leaders to grasp attrition patterns and risk areas across the company quickly.
+3. **Predict At-Risk Employees:** Use machine learning to estimate the likelihood of individual employees leaving, enabling proactive retention strategies and targeted interventions.
+4. **Support Data-Driven HR Decisions:** Deliver insights and predictions in a format that is accessible to both technical and non-technical stakeholders, supporting evidence-based workforce planning and policy development.
 
 
 ## Hypothesis and how to validate?
