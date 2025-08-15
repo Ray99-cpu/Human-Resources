@@ -273,8 +273,24 @@ The main dashboard has the has the following features:
 * If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+Challenges Faced and Strategies Used
+
+1.	Data Understanding and Feature Relevance
+	Challenge: The dataset contained 35 columns, including constant variables (EmployeeCount, Over18, StandardHours) that added no analytical value.
+	Strategy: Conducted an initial data audit using Pandas .info() and .describe() to identify and remove irrelevant or constant features before analysis.
+
+2.	Bias and Ethical Considerations
+	Challenge: The dataset included demographic variables such as gender, age, and marital status, which posed risks for bias in predictive models.
+	Strategy: Reviewed demographic distributions in exploratory analysis to detect disproportionate attrition rates and documented ethical handling of these variables, ensuring they are treated cautiously in modeling stages.
+
+3.	Data Preparation for Machine Learning
+	Challenge: Categorical variables (e.g., BusinessTravel, JobRole) needed to be converted into numerical form for machine learning algorithms.
+	Strategy: Used LabelEncoder for binary columns and considered one-hot encoding for multi-category features to avoid imposing false ordinal relationships.
+  
+4.	Model Interpretability
+	Challenge: Predictive models like Random Forest can provide high accuracy but are sometimes seen as “black boxes.”
+	Strategy: Extracted feature importance rankings from the model and supplemented findings with visualizations (bar plots, correlation heatmaps) to make insights more understandable to non-technical stakeholders.
+
 
 ## Deployment
 
