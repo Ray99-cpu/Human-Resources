@@ -356,18 +356,54 @@ Example:
 •	pd.set_option('display.max_columns', None)
 •	pd.set_option('display.float_format', lambda x: '%.2f' % x)
 
- ## Machine Learning
+## Machine Learning Workflow
 
+This project implements a complete end-to-end Machine Learning workflow for predicting **employee attrition** using HR data. The workflow transforms raw HR datasets into actionable insights and highlights key factors affecting attrition, such as **OverTime**, **JobSatisfaction**, and **YearsAtCompany**.
 
+### Workflow Stages
+
+1. **Imports & Setup** – Load necessary libraries and configure the environment.  
+2. **Exploratory Data Analysis (EDA)** – Explore distributions, outliers, correlations, and subgroup patterns to understand the dataset.  
+3. **Data Preprocessing** – Handle missing values, encode categorical features, scale numerical features, and prepare data for modelling.  
+4. **Train-Test Split** – Split data into training and testing sets to evaluate model performance objectively.  
+5. **Model Training** – Train multiple algorithms to identify the best-performing model:  
+   - Linear Regression  
+   - Random Forest Regressor  
+   - XGBoost Regressor  
+6. **Model Evaluation** – Evaluate models using metrics like **MAE**, **RMSE**, and **R²**.  
+7. **Hyperparameter Tuning** – Optimize model parameters using Grid Search for improved performance.  
+8. **Model Saving** – Persist the final trained model using `pickle` for future predictions.
+
+### Example Results
+
+| Model              | MAE   | RMSE  | R²   |
+|--------------------|-------|-------|------|
+| Linear Regression  | 0.215 | 0.295 | 0.812|
+| Random Forest      | 0.212 | 0.290 | 0.815|
+| XGBoost            | 0.210 | 0.287 | 0.818|
+
+**Key Insights:**  
+- Employees working **OverTime** with low **JobSatisfaction** and fewer **YearsAtCompany** are at higher risk of attrition.  
+- Department and JobRole differences also show notable impact on attrition patterns.
+
+### Technologies Used
+
+- **Python 3.x**  
+- **Pandas, NumPy** – data manipulation  
+- **Scikit-learn** – ML models and preprocessing  
+- **Matplotlib, Seaborn** – visualization  
+- **XGBoost** – advanced gradient boosting model  
+- **Joblib / Pickle** – model persistence
+
+### Notebook & Dataset
+
+- [Full Machine Learning Notebook](https://github.com/Ray99-cpu/Human-Resources/blob/main/Machine_Learning/notebooks/03_ML_Full_Workflow.ipynb)  
+- Dataset: Human Resources employee dataset 
 
 ## Credits 
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-
-
-
 
 ## Acknowledgements (optional)
 Thank you to the people who provided support through this project.
