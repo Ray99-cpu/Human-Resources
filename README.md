@@ -1,15 +1,3 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-
-# Predicting Employee Attrition
-
-This project provides a clear and practical analytics platform to help Human Resources teams understand and reduce employee attrition. Using the [IBM HR Analytics Employee Attrition & Performance dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-datase) from Kaggle, it uncovers the main reasons why employees leave and helps organizations take action to keep their best talent.
-
-**Key features:**
-- **Easy-to-understand Dashboards:** Six simple plots show important trends, such as how many people leave, which departments and genders are most affected, and how income, job satisfaction, and years at the company relate to attrition. These visuals are designed for everyone, whether or not you have a technical background.
-- **Attrition Prediction:** The project uses machine learning to predict which employees are most likely to leave, so HR teams can act early and improve retention.
-
-By combining clear visual analysis with predictive tools, this project turns HR data into useful insights for better workforce planning and decision-making.
 # Human Resources Data Analysis
 
 **Human Resources Data Analysis** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
@@ -18,12 +6,12 @@ By combining clear visual analysis with predictive tools, this project turns HR 
 The HR Employee Attrition dataset contains 1,470 employee records and 35 variables, covering demographic details, job-related information, compensation, work conditions, satisfaction scores, and performance ratings. Demographic features include age, gender, and marital status, while job-related data captures department, job role, job level, years at the company, and time in the current role or under the current manager. Compensation is represented through monthly income, hourly and daily rates, monthly rate, stock option level, and recent salary hikes. Work conditions include business travel frequency, distance from home, overtime status, work-life balance, and training participation. Satisfaction metrics assess environment, job, and relationships, while performance ratings capture employee evaluation scores. The target variable, Attrition, indicates whether an employee has left the company. Some variables, such as EmployeeCount, Over18, and StandardHours, are constants and can be removed for analysis. The dataset is complete with no missing values, making it suitable for predictive modeling and exploratory analysis to understand factors influencing employee turnover.
 
 ## Business Requirements
-## User Stories
-As an HR manager, I want to see which employees are at risk of leaving, so that I can take action to retain them.
-As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
-As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
+*To be updated: Describe your business requirements here.*
 
-* Describe your business requirements #need to add
+## User Stories
+- As an HR manager, I want to see which employees are at risk of leaving, so that I can take action to retain them.
+- As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
+- As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
 
 ## 1. Employee Attrition Count
 
@@ -243,13 +231,13 @@ The main dashboard has the has the following features:
 * Explain how the dashboard was designed to communicate complex data insights to different audiences. 
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+*To be updated: Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.*
+*To be updated: Did you recognise gaps in your knowledge, and how did you address them?*
+*To be updated: If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.*
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+*To be updated: What challenges did you face, and what strategies were used to overcome these challenges?*
+*To be updated: What new skills or tools do you plan to learn next based on your project experience?*
 
 ## Deployment
 
