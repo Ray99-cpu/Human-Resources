@@ -1,15 +1,3 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-
-# Predicting Employee Attrition
-
-This project provides a clear and practical analytics platform to help Human Resources teams understand and reduce employee attrition. Using the [IBM HR Analytics Employee Attrition & Performance dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-datase) from Kaggle, it uncovers the main reasons why employees leave and helps organizations take action to keep their best talent.
-
-**Key features:**
-- **Easy-to-understand Dashboards:** Six simple plots show important trends, such as how many people leave, which departments and genders are most affected, and how income, job satisfaction, and years at the company relate to attrition. These visuals are designed for everyone, whether or not you have a technical background.
-- **Attrition Prediction:** The project uses machine learning to predict which employees are most likely to leave, so HR teams can act early and improve retention.
-
-By combining clear visual analysis with predictive tools, this project turns HR data into useful insights for better workforce planning and decision-making.
 # Human Resources Data Analysis
 
 **Human Resources Data Analysis** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
@@ -18,7 +6,12 @@ By combining clear visual analysis with predictive tools, this project turns HR 
 The HR Employee Attrition dataset contains 1,470 employee records and 35 variables, covering demographic details, job-related information, compensation, work conditions, satisfaction scores, and performance ratings. Demographic features include age, gender, and marital status, while job-related data captures department, job role, job level, years at the company, and time in the current role or under the current manager. Compensation is represented through monthly income, hourly and daily rates, monthly rate, stock option level, and recent salary hikes. Work conditions include business travel frequency, distance from home, overtime status, work-life balance, and training participation. Satisfaction metrics assess environment, job, and relationships, while performance ratings capture employee evaluation scores. The target variable, Attrition, indicates whether an employee has left the company. Some variables, such as EmployeeCount, Over18, and StandardHours, are constants and can be removed for analysis. The dataset is complete with no missing values, making it suitable for predictive modeling and exploratory analysis to understand factors influencing employee turnover.
 
 ## Business Requirements
+*To be updated: Describe your business requirements here.*
+
 ## User Stories
+- As an HR manager, I want to see which employees are at risk of leaving, so that I can take action to retain them.
+- As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
+- As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
 As an HR manager, I want to see which employees are at risk of leaving, so that I can take action to retain them.
 As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
 As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
@@ -167,7 +160,6 @@ This HR Attrition Dashboard will enable HR managers, executives, and department 
 - Target imbalance (far more “No” than “Yes” in `Attrition`) reduced the statistical power of certain tests.  
   - **Alternative:** class balancing (e.g., SMOTE) for predictive modelling.  
 - High cardinality in features like `JobRole` diluted insights.  
-  - **Alternative:** logical grouping of similar categories or Weight of Evidence (WoE) encoding (with caution to prevent leakage).  
 - Potential multicollinearity between variables (e.g., `JobLevel` and `MonthlyIncome`).  
   - **Alternative:** remove redundant features after Variance Inflation Factor (VIF) analysis.  
 
@@ -206,6 +198,16 @@ This sequence moves from data understanding → hypothesis generation → statis
 - **Code Optimisation:** Improved Pandas workflows by replacing slow `.apply()` loops with vectorised operations, streamlining `groupby.agg` pipelines, and creating reusable plotting functions for consistent visuals.  
 - **Documentation:** Assisted in drafting clear, concise README sections and presentation text, ensuring both technical accuracy and accessibility.  
 
+## Ethical Considerations
+
+**Data Privacy:**  
+The dataset is publicly available and anonymized, containing no personally identifiable information. All analyses comply with data privacy standards, ensuring individual employees cannot be identified.
+
+**Bias and Fairness:**  
+There may be potential biases in the original data collection, such as underrepresentation of certain groups or departments. To address this, exploratory analysis was used to check for imbalances, and fairness checks were included in model evaluation. Any detected biases were documented, with recommendations for fairer data collection and analysis.
+
+**Legal and Societal Issues:**  
+No legal issues were found, as the dataset is open-source and used for educational purposes. Societal impacts—such as the risk of unfairly targeting groups for retention or attrition interventions—were considered. The project emphasizes transparency and responsible use of predictive analytics in HR.
 ## Ethical considerations
 
 1. Data Privacy under GDPR
@@ -273,9 +275,14 @@ The main dashboard has the has the following features:
 * Explain how the dashboard was designed to communicate complex data insights to different audiences. 
 
 ## Unfixed Bugs
+*To be updated: Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.*
+*To be updated: Did you recognise gaps in your knowledge, and how did you address them?*
+*To be updated: If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.*
 A merge conflict has been encountered while attempting to integrate changes into the main branch on GitHub. This issue is currently preventing a successful merge and requires resolution.
 
 ## Development Roadmap
+*To be updated: What challenges did you face, and what strategies were used to overcome these challenges?*
+*To be updated: What new skills or tools do you plan to learn next based on your project experience?*
 Challenges Faced and Strategies Used
 
 1.	Data Understanding and Feature Relevance
@@ -300,8 +307,8 @@ Challenges Faced and Strategies Used
 We are using Power BI in order to make the Dashboards.
 
 
+
 ## Main Data Analysis Libraries
-Main Data Analysis Libraries
 The following Python libraries were used to collect, clean, analyze, visualize, and model the HR Employee Attrition dataset:
 
 1. Data Handling
@@ -405,8 +412,34 @@ This project implements a complete end-to-end Machine Learning workflow for pred
 - [Full Machine Learning Notebook](https://github.com/Ray99-cpu/Human-Resources/blob/main/Machine_Learning/notebooks/03_ML_Full_Workflow.ipynb)  
 - Dataset: Human Resources employee dataset 
 
-## Credits 
+## Credits
 
+### Dataset
+- [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) from Kaggle.
+- Content and analysis support provided by ChatGPT.
+- Project guidance and facilitation by Emma (facilitator).
+
+
+## Dashboard Design
+
+The Power BI dashboard was designed using Balsamiq for wireframing. The main dashboard page includes:
+
+![hr_wireframe](hr_wireframes/hr.png)
+
+**Dashboard Pages:**
+- Business requirement 1
+- Business requirement 2
+- Business requirement 3
+- Main Dashboard
+
+**Key Features:**
+- AI-driven Q&A
+- Key Influencers
+- Map visualization
+
+![hr_dash](visualisations/hr_dash.png)
+
+The dashboard is designed to communicate complex data insights to both technical and non-technical audiences through interactive visualizations, clear KPIs, and drill-down capabilities. Data insights are presented using a combination of charts, tables, and narrative explanations to ensure accessibility for all stakeholders.
 ### Dataset
 - [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) from Kaggle.
 - Content and analysis support provided by ChatGPT.
