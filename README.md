@@ -8,6 +8,11 @@
 The HR Employee Attrition dataset contains 1,470 employee records and 35 variables, covering demographic details, job-related information, compensation, work conditions, satisfaction scores, and performance ratings. Demographic features include age, gender, and marital status, while job-related data captures department, job role, job level, years at the company, and time in the current role or under the current manager. Compensation is represented through monthly income, hourly and daily rates, monthly rate, stock option level, and recent salary hikes. Work conditions include business travel frequency, distance from home, overtime status, work-life balance, and training participation. Satisfaction metrics assess environment, job, and relationships, while performance ratings capture employee evaluation scores. The target variable, Attrition, indicates whether an employee has left the company. Some variables, such as EmployeeCount, Over18, and StandardHours, are constants and can be removed for analysis. The dataset is complete with no missing values, making it suitable for predictive modeling and exploratory analysis to understand factors influencing employee turnover.
 
 ## Business Requirements
+## User Stories
+As an HR manager, I want to see which employees are at risk of leaving, so that I can take action to retain them.
+As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
+As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
+
 * Describe your business requirements #need to add
 
 
