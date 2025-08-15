@@ -94,7 +94,47 @@ Methodology Justification:
 This methodology was chosen to balance descriptive analysis (for understanding patterns and relationships) with predictive modeling (for identifying key attrition drivers and estimating turnover risk). Using Python’s data science stack (Pandas, Seaborn, Matplotlib, and scikit-learn) ensured a reproducible, flexible, and well-supported analytical process. EDA was prioritized to guide feature selection, while supervised machine learning provided quantifiable importance metrics for decision-making.
 
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+Business Requirements
+General Requirements for the HR Analytics Dashboard
+User Interface & Navigation
+•	Clear dashboard header with "HR Attrition Dashboard" title and date of data refresh.
+•	Filters for Department, Job Role, Education Field, Gender, Marital Status, and Time Period.
+•	Interactive drill-down capability to move from company-wide to department-level and employee-level views.
+ 
+HR Attrition & Workforce Analytics Dashboard Requirements:
+Metrics:
+•	Overall attrition rate (% of employees who left).
+•	Attrition rate by department, job role, and demographic groups.
+•	Number of employees flagged as “high attrition risk.”
+•	Top attrition risk factors (e.g., low job satisfaction, overtime, long commute, low environment satisfaction).
+•	Average tenure and time in current role.
+
+Visuals:
+•	KPI cards for overall attrition rate, number of at-risk employees, and average tenure.
+•	Bar chart: Attrition by department.
+•	Heatmap: Attrition by department and job role.
+•	Table: List of at-risk employees with department, role, satisfaction scores, and risk score.
+•	Correlation chart: Key factors contributing to attrition.
+•	Trend line: Attrition rate over time.
+
+Filters:
+•	Department
+•	Job Role
+•	Education Field
+•	Marital Status
+•	Gender
+•	Overtime status
+•	Time period
+
+Insights:
+•	Predict high-risk employees using a risk scoring model from key attributes (e.g., job satisfaction, overtime, distance from home).
+•	Highlight departments with rising attrition trends.
+•	Suggest targeted retention actions such as workload adjustments, promotions, or career development opportunities.
+ 
+Summary Paragraph
+This HR Attrition Dashboard will enable HR managers, executives, and department leads to monitor workforce stability and proactively address employee turnover risks. By leveraging demographic, performance, and satisfaction data from the HRIS, the dashboard will provide real-time insights into attrition rates, high-risk employees, and underlying drivers such as overtime demands, job dissatisfaction, and commute distance. Through interactive visualizations, predictive analytics, and targeted insights, leadership can make data-driven decisions to improve retention, enhance employee engagement, and strengthen organizational stability.
+
+
 
 ## Analysis Techniques Used  
 
@@ -212,12 +252,67 @@ The main dashboard has the has the following features:
 We are using Power BI in order to make the Dashboards.
 
 
-
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
-
-
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+Main Data Analysis Libraries
+The following Python libraries were used to collect, clean, analyze, visualize, and model the HR Employee Attrition dataset:
+
+1. Data Handling
+•	pandas – Used for loading the CSV dataset, cleaning data, removing unnecessary columns, and generating descriptive statistics.
+Example:
+•	import pandas as pd
+•	df = pd.read_csv("data/raw_data/HR-Employee-Attrition.csv")
+•	df = df.drop(columns=['EmployeeCount', 'Over18', 'StandardHours'])
+•	numpy – Used for numerical operations, creating arrays, and performing calculations on large datasets.
+Example:
+•	import numpy as np
+•	avg_income = np.mean(df['MonthlyIncome'])
+ 
+2. Data Visualization
+•	matplotlib.pyplot – Used to create custom plots such as histograms, bar charts, and scatter plots for data exploration.
+Example:
+•	import matplotlib.pyplot as plt
+•	plt.hist(df['Age'], bins=10)
+•	plt.xlabel("Age")
+•	plt.ylabel("Number of Employees")
+•	plt.show()
+•	seaborn – Built on Matplotlib, used for advanced visualizations with better styling and built-in statistical plots.
+Example:
+•	import seaborn as sns
+•	sns.countplot(x='Attrition', data=df)
+•	plt.title("Attrition Distribution")
+•	plt.show()
+ 
+3. Machine Learning & Preprocessing
+•	sklearn.preprocessing.LabelEncoder – Used to convert categorical variables (e.g., Gender, JobRole) into numeric codes for modeling.
+Example:
+•	from sklearn.preprocessing import LabelEncoder
+•	le = LabelEncoder()
+•	df['Attrition'] = le.fit_transform(df['Attrition'])
+•	sklearn.preprocessing.StandardScaler – Used to standardize numerical features for models sensitive to feature scaling.
+Example:
+•	from sklearn.preprocessing import StandardScaler
+•	scaler = StandardScaler()
+•	df[['MonthlyIncome']] = scaler.fit_transform(df[['MonthlyIncome']])
+•	sklearn.model_selection.train_test_split – Used to split the dataset into training and testing sets for evaluation.
+Example:
+•	from sklearn.model_selection import train_test_split
+•	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+•	sklearn.ensemble.RandomForestClassifier – Used to build a predictive model for attrition and determine feature importance.
+Example:
+•	from sklearn.ensemble import RandomForestClassifier
+•	model = RandomForestClassifier()
+•	model.fit(X_train, y_train)
+•	sklearn.metrics – Used to evaluate model performance with metrics like accuracy, precision, recall, and F1-score.
+Example:
+•	from sklearn.metrics import classification_report
+•	print(classification_report(y_test, model.predict(X_test)))
+ 
+4. Display Settings
+•	Adjusted Pandas display settings to show all columns and format floating-point numbers to two decimal places for cleaner output.
+Example:
+•	pd.set_option('display.max_columns', None)
+•	pd.set_option('display.float_format', lambda x: '%.2f' % x)
+
 
 
 ## Credits 
