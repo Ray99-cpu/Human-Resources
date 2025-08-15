@@ -244,8 +244,8 @@ The main dashboard has the has the following features:
 We are using Power BI in order to make the Dashboards.
 
 
+
 ## Main Data Analysis Libraries
-Main Data Analysis Libraries
 The following Python libraries were used to collect, clean, analyze, visualize, and model the HR Employee Attrition dataset:
 
 1. Data Handling
@@ -314,10 +314,24 @@ Example:
 - Content and analysis support provided by ChatGPT.
 - Project guidance and facilitation by Emma (facilitator).
 
-### Media
-- All visualizations and plots generated within this project are original unless otherwise stated.
 
+## Dashboard Design
 
+The Power BI dashboard was designed using Balsamiq for wireframing. The main dashboard page includes:
 
-## Acknowledgements (optional)
-* Thank the people who provided support through this project.
+![hr_wireframe](hr_wireframes/hr.png)
+
+**Dashboard Pages:**
+- Business requirement 1
+- Business requirement 2
+- Business requirement 3
+- Main Dashboard
+
+**Key Features:**
+- AI-driven Q&A
+- Key Influencers
+- Map visualization
+
+![hr_dash](visualisations/hr_dash.png)
+
+The dashboard is designed to communicate complex data insights to both technical and non-technical audiences through interactive visualizations, clear KPIs, and drill-down capabilities. Data insights are presented using a combination of charts, tables, and narrative explanations to ensure accessibility for all stakeholders.
