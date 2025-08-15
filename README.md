@@ -1,19 +1,52 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# Project XYZ
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+# Predicting Employee Attrition
+
+This project provides a clear and practical analytics platform to help Human Resources teams understand and reduce employee attrition. Using the [IBM HR Analytics Employee Attrition & Performance dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-datase) from Kaggle, it uncovers the main reasons why employees leave and helps organizations take action to keep their best talent.
+
+**Key features:**
+- **Easy-to-understand Dashboards:** Six simple plots show important trends, such as how many people leave, which departments and genders are most affected, and how income, job satisfaction, and years at the company relate to attrition. These visuals are designed for everyone, whether or not you have a technical background.
+- **Attrition Prediction:** The project uses machine learning to predict which employees are most likely to leave, so HR teams can act early and improve retention.
+
+By combining clear visual analysis with predictive tools, this project turns HR data into useful insights for better workforce planning and decision-making.
 
 ## Dataset Content
 * Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
 
 
 ## Business Requirements
-* Describe your business requirements
+The main business requirements for this project are:
+
+1. **Understand Key Drivers of Employee Attrition:** Identify the most significant factors that contribute to employees leaving the organization, such as department, gender, income, job satisfaction, and tenure.
+2. **Visualize Attrition Trends:** Provide clear, actionable dashboards that allow HR and business leaders to quickly grasp attrition patterns and risk areas across the company.
+3. **Predict At-Risk Employees:** Use machine learning to estimate the likelihood of individual employees leaving, enabling proactive retention strategies and targeted interventions.
+4. **Support Data-Driven HR Decisions:** Deliver insights and predictions in a format that is accessible to both technical and non-technical stakeholders, supporting evidence-based workforce planning and policy development.
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+
+Below are five hypotheses for this project, along with the statistical test to validate each:
+
+1. **Attrition and Department**  
+	Hypothesis: The rate of employee attrition is not the same across all departments.  
+	Statistical Test: Chi-square test of independence between Department and Attrition.
+
+2. **Attrition and Gender**  
+	Hypothesis: There is no significant difference in attrition rates between male and female employees.  
+	Statistical Test: Chi-square test of independence between Gender and Attrition.
+
+3. **Attrition and Monthly Income**  
+	Hypothesis: Employees who leave have the same average monthly income as those who stay.  
+	Statistical Test: Independent samples t-test comparing Monthly Income for Attrition = Yes vs. No.
+
+4. **Attrition and Job Satisfaction**  
+	Hypothesis: There is no difference in job satisfaction scores between employees who leave and those who stay.  
+	Statistical Test: Mann-Whitney U test (if Job Satisfaction is ordinal) or t-test (if treated as continuous).
+
+5. **Attrition and Years at Company**  
+	Hypothesis: The average years at company is the same for employees who leave and those who stay.  
+	Statistical Test: Independent samples t-test comparing YearsAtCompany for Attrition = Yes vs. No.
 
 ## Project Plan
 * Outline the high-level steps taken for the analysis.
