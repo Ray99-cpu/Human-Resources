@@ -12,7 +12,26 @@ The HR Employee Attrition dataset contains 1,470 employee records and 35 variabl
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+
+1. **Attrition vs. Department**  
+   - **Hypothesis:** Employee attrition rates are the same across all departments.  
+   - **Test:** Chi-square test of independence.
+
+2. **Attrition vs. Gender**  
+   - **Hypothesis:** Attrition rates do not differ between male and female employees.  
+   - **Test:** Chi-square test of independence.
+
+3. **Attrition vs. Monthly Income**  
+   - **Hypothesis:** Employees who leave have the same average monthly income as those who stay.  
+   - **Test:** Independent samples t-test.
+
+4. **Attrition vs. Job Satisfaction**  
+   - **Hypothesis:** Job satisfaction scores are the same for employees who leave and those who stay.  
+   - **Test:** Mann-Whitney U test (for ordinal data) or t-test (for continuous data).
+
+5. **Attrition vs. Years at Company**  
+   - **Hypothesis:** The average years at the company is the same for employees who leave and those who stay.  
+   - **Test:** Independent samples t-test.
 
 ## Project Plan
 The analysis followed a structured, high-level workflow to ensure accuracy, efficiency, and reproducibility. The main steps were:
