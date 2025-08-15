@@ -372,8 +372,9 @@ Example:
 
 
 ## Acknowledgements (optional)
-* Thank the people who provided support through this project.
-Emma Lamont
-Spencer
-Niel
-The whole team
+Thank you to the people who provided support through this project.
+
+* Emma Lamont
+* Spencer
+* Niel
+* The whole team
