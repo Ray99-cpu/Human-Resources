@@ -200,9 +200,16 @@ This sequence moves from data understanding → hypothesis generation → statis
 - **Code Optimisation:** Improved Pandas workflows by replacing slow `.apply()` loops with vectorised operations, streamlining `groupby.agg` pipelines, and creating reusable plotting functions for consistent visuals.  
 - **Documentation:** Assisted in drafting clear, concise README sections and presentation text, ensuring both technical accuracy and accessibility.  
 
-## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+## Ethical Considerations
+
+**Data Privacy:**  
+The dataset is publicly available and anonymized, containing no personally identifiable information. All analyses comply with data privacy standards, ensuring individual employees cannot be identified.
+
+**Bias and Fairness:**  
+There may be potential biases in the original data collection, such as underrepresentation of certain groups or departments. To address this, exploratory analysis was used to check for imbalances, and fairness checks were included in model evaluation. Any detected biases were documented, with recommendations for fairer data collection and analysis.
+
+**Legal and Societal Issues:**  
+No legal issues were found, as the dataset is open-source and used for educational purposes. Societal impacts—such as the risk of unfairly targeting groups for retention or attrition interventions—were considered. The project emphasizes transparency and responsible use of predictive analytics in HR.
 
 ## Dashboard Design
 
