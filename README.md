@@ -422,10 +422,6 @@ This project implements a complete end-to-end Machine Learning workflow for pred
 - [Full Machine Learning Notebook](https://github.com/Ray99-cpu/Human-Resources/blob/main/Machine_Learning/notebooks/03_ML_Full_Workflow.ipynb)  
 - Dataset: Human Resources employee dataset 
 
-## Credits
-
-
-
 
 ## Dashboard Design
 
