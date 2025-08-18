@@ -241,10 +241,7 @@ No legal issues were found, as the dataset is open-source and used for education
 
 
 ## Unfixed Bugs
-*To be updated: Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.*
-*To be updated: Did you recognise gaps in your knowledge, and how did you address them?*
-*To be updated: If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.*
-A merge conflict has been encountered while attempting to integrate changes into the main branch on GitHub. This issue is currently preventing a successful merge and requires resolution.
+During the development of our project, we encountered two primary issues that impacted our workflow. First, a merge conflict arose when attempting to integrate changes between branches, specifically affecting several key files in the repository. This conflict required manual resolution and highlighted the need for improved branch synchronization and smaller, more frequent commits to prevent similar issues in the future. Second, we faced communication challenges due to network errors during Discord calls, which disrupted team coordination. To address this, the team successfully pivoted to alternative communication methods, ensuring effective collaboration despite the technical difficulties. Both issues have been documented in our project’s bug tracking system, with actionable steps outlined to mitigate recurrence, including enhanced Git practices and backup communication channels.
 
 ## Development Roadmap
 *To be updated: What challenges did you face, and what strategies were used to overcome these challenges?*
