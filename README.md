@@ -424,10 +424,7 @@ This project implements a complete end-to-end Machine Learning workflow for pred
 
 ## Credits
 
-### Dataset
-- [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) from Kaggle.
-- Content and analysis support provided by ChatGPT.
-- Project guidance and facilitation by Emma (facilitator).
+
 
 
 ## Dashboard Design
