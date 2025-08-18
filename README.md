@@ -240,49 +240,6 @@ No legal issues were found, as the dataset is open-source and used for education
 •	Transparency allows others to audit and replicate the findings, reducing the risk of hidden bias or unintentional misuse. This aligns with GDPR’s accountability principle and responsible AI guidelines.
 
 
-## Dashboard Design
-
-The Power BI dashboard was designed using the Balsamiq software. The main dashboard page has been designed in the following way:
-
-
-![hr_wireframe](hr_wireframes/hr.png)
-
-
-
-
-The Power BI dashboard has the following pages:
-
-
-* Business requirement 1
-
-* Business requirement 2
-
-* Business requirement 3
-
-* Dashboard
-
-The main dashboard has the has the following features:
-
-* AI driven Q & A 
-
-* Key Influencers
-
-* Map 
-
-
-
-
-![hr_dash](visualisations/hr_dash.png)
-
-
-
-
-
-
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
-
 ## Unfixed Bugs
 *To be updated: Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.*
 *To be updated: Did you recognise gaps in your knowledge, and how did you address them?*
