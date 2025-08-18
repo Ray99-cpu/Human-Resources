@@ -22,6 +22,9 @@ The main business requirements for this project are:
 - As an HR manager, I want to see which employees are at risk of leaving, so that I can take action to retain them.
 - As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
 - As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
+As an HR manager, I want to see which employees are at risk of leaving, so that I can take action to retain them.
+As a company executive, I want to understand the main factors driving employee attrition, so that I can make informed policy decisions.
+As a team lead, I want to monitor attrition trends by department over time, so that I can identify and address problem areas early.
 
 ## 1. Employee Attrition Count
 
@@ -91,18 +94,27 @@ This plot illustrates how long employees who left versus stayed had been at the 
 
 ## Project Plan
 The analysis followed a structured, high-level workflow to ensure accuracy, efficiency, and reproducibility. The main steps were:
+
 1.	Data Collection – The dataset was sourced from the HR Employee Attrition records, containing 1,470 entries and 35 variables covering demographics, job information, compensation, work conditions, satisfaction, and attrition status.
+
 2.	Data Loading & Management – The raw CSV file was loaded into Python using the Pandas library. During the loading phase, column names, data types, and completeness were verified. The dataset was stored in a version-controlled environment to maintain integrity throughout the analysis.
+
 3.	Data Cleaning & Preprocessing – Redundant constant columns (EmployeeCount, Over18, StandardHours) were removed. Categorical features were prepared for encoding, and numerical features were reviewed for scaling if required. No missing values were found, so imputation was not necessary.
+
 4.	Exploratory Data Analysis (EDA) – Summary statistics and visualizations were generated to understand distributions, detect outliers, and reveal patterns in the data. Special focus was given to the relationship between attrition and factors such as overtime, job role, years at the company, and income.
+
 5.	Modeling & Analysis – Machine learning models (e.g., Random Forest Classifier) were chosen to identify key drivers of attrition and predict employee turnover. The data was split into training and testing sets to evaluate performance objectively.
+
 6.	Interpretation & Insights – Model results were interpreted alongside visual analysis to identify actionable insights for HR strategy, including which factors most strongly influenced employee retention.
+
 7.	Documentation & Reporting – All code, outputs, and interpretations were documented in a structured format to ensure reproducibility and clear communication of findings.
+
 Methodology Justification:
 This methodology was chosen to balance descriptive analysis (for understanding patterns and relationships) with predictive modeling (for identifying key attrition drivers and estimating turnover risk). Using Python’s data science stack (Pandas, Seaborn, Matplotlib, and scikit-learn) ensured a reproducible, flexible, and well-supported analytical process. EDA was prioritized to guide feature selection, while supervised machine learning provided quantifiable importance metrics for decision-making.
 
 ## The rationale to map the business requirements to the Data Visualisations
-Business Requirements
+Business Requirements:
+
 General Requirements for the HR Analytics Dashboard
 User Interface & Navigation
 •	Clear dashboard header with "HR Attrition Dashboard" title and date of data refresh.
@@ -126,8 +138,19 @@ Visuals:
 •	Trend line: Attrition rate over time.
 
 Filters:
+•	Department
+•	Job Role
+•	Education Field
+•	Marital Status
+•	Gender
+•	Overtime status
+•	Time period
+
+Insights:
+•	Predict high-risk employees using a risk scoring model from key attributes (e.g., job satisfaction, overtime, distance from home).
+•	Highlight departments with rising attrition trends.
+•	Suggest targeted retention actions such as workload adjustments, promotions, or career development opportunities.
  
-Summary Paragraph
 This HR Attrition Dashboard will enable HR managers, executives, and department leads to monitor workforce stability and proactively address employee turnover risks. By leveraging demographic, performance, and satisfaction data from the HRIS, the dashboard will provide real-time insights into attrition rates, high-risk employees, and underlying drivers such as overtime demands, job dissatisfaction, and commute distance. Through interactive visualizations, predictive analytics, and targeted insights, leadership can make data-driven decisions to improve retention, enhance employee engagement, and strengthen organizational stability.
 
 
@@ -195,6 +218,28 @@ There may be potential biases in the original data collection, such as underrepr
 
 **Legal and Societal Issues:**  
 No legal issues were found, as the dataset is open-source and used for educational purposes. Societal impacts—such as the risk of unfairly targeting groups for retention or attrition interventions—were considered. The project emphasizes transparency and responsible use of predictive analytics in HR.
+## Ethical considerations
+
+1. Data Privacy under GDPR
+•	The dataset contains sensitive employment information that would be regulated under GDPR in a real-world context.
+•	Columns include salary (MonthlyIncome), performance ratings (PerformanceRating), and job history (YearsAtCompany, JobRole) — all of which are considered personal data under GDPR if linked to identifiable individuals.
+•	GDPR requires personal data to be processed lawfully, fairly, and transparently. Even without direct identifiers like names, indirect identifiers could lead to re-identification if combined with other datasets. Therefore, real-world use would require anonymization or pseudonymization, secure storage, and a clear legal basis for processing.
+ 
+2. Bias and Fairness in the Data
+•	Historical HR datasets may embed biases that could influence analysis and prediction outcomes.
+•	The dataset includes demographic attributes such as gender (Gender), age (Age), and marital status (MaritalStatus), which could correlate with attrition but also reflect systemic inequalities.
+•	If models are trained on biased historical data without intervention, they could perpetuate unfair patterns (e.g., predicting higher attrition for certain age groups or genders). To prevent this, these variables were examined during EDA to detect disproportionate attrition patterns and should be handled with fairness-aware algorithms in predictive contexts.
+ 
+3. Responsible Use of Insights
+•	Insights from the analysis should be used to improve retention strategies, not as grounds for discriminatory decisions.
+•	Predictive models can identify factors correlated with attrition, such as overtime work or low job satisfaction, but may also reveal demographic patterns.
+•	Using such findings to target specific groups for termination or exclusion would be unethical and could breach employment law. Instead, results should guide positive interventions such as workload adjustments, engagement programs, or career development opportunities.
+ 
+4. Transparency and Accountability
+•	Analytical methods and assumptions must be transparent to ensure trust and compliance.
+•	The analysis was documented step-by-step, from data loading and cleaning to model selection and evaluation.
+•	Transparency allows others to audit and replicate the findings, reducing the risk of hidden bias or unintentional misuse. This aligns with GDPR’s accountability principle and responsible AI guidelines.
+
 
 ## Dashboard Design
 
@@ -206,7 +251,6 @@ The Power BI dashboard was designed using the Balsamiq software. The main dashbo
 
 
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
 The Power BI dashboard has the following pages:
 
 
@@ -244,10 +288,29 @@ The main dashboard has the has the following features:
 *To be updated: Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.*
 *To be updated: Did you recognise gaps in your knowledge, and how did you address them?*
 *To be updated: If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.*
+A merge conflict has been encountered while attempting to integrate changes into the main branch on GitHub. This issue is currently preventing a successful merge and requires resolution.
 
 ## Development Roadmap
 *To be updated: What challenges did you face, and what strategies were used to overcome these challenges?*
 *To be updated: What new skills or tools do you plan to learn next based on your project experience?*
+Challenges Faced and Strategies Used
+
+1.	Data Understanding and Feature Relevance
+	Challenge: The dataset contained 35 columns, including constant variables (EmployeeCount, Over18, StandardHours) that added no analytical value.
+	Strategy: Conducted an initial data audit using Pandas .info() and .describe() to identify and remove irrelevant or constant features before analysis.
+
+2.	Bias and Ethical Considerations
+	Challenge: The dataset included demographic variables such as gender, age, and marital status, which posed risks for bias in predictive models.
+	Strategy: Reviewed demographic distributions in exploratory analysis to detect disproportionate attrition rates and documented ethical handling of these variables, ensuring they are treated cautiously in modeling stages.
+
+3.	Data Preparation for Machine Learning
+	Challenge: Categorical variables (e.g., BusinessTravel, JobRole) needed to be converted into numerical form for machine learning algorithms.
+	Strategy: Used LabelEncoder for binary columns and considered one-hot encoding for multi-category features to avoid imposing false ordinal relationships.
+  
+4.	Model Interpretability
+	Challenge: Predictive models like Random Forest can provide high accuracy but are sometimes seen as “black boxes.”
+	Strategy: Extracted feature importance rankings from the model and supplemented findings with visualizations (bar plots, correlation heatmaps) to make insights more understandable to non-technical stakeholders.
+
 
 ## Deployment
 
@@ -315,7 +378,49 @@ Example:
 •	pd.set_option('display.max_columns', None)
 •	pd.set_option('display.float_format', lambda x: '%.2f' % x)
 
+## Machine Learning Workflow
 
+This project implements a complete end-to-end Machine Learning workflow for predicting **employee attrition** using HR data. The workflow transforms raw HR datasets into actionable insights and highlights key factors affecting attrition, such as **OverTime**, **JobSatisfaction**, and **YearsAtCompany**.
+
+### Workflow Stages
+
+1. **Imports & Setup** – Load necessary libraries and configure the environment.  
+2. **Exploratory Data Analysis (EDA)** – Explore distributions, outliers, correlations, and subgroup patterns to understand the dataset.  
+3. **Data Preprocessing** – Handle missing values, encode categorical features, scale numerical features, and prepare data for modelling.  
+4. **Train-Test Split** – Split data into training and testing sets to evaluate model performance objectively.  
+5. **Model Training** – Train multiple algorithms to identify the best-performing model:  
+   - Linear Regression  
+   - Random Forest Regressor  
+   - XGBoost Regressor  
+6. **Model Evaluation** – Evaluate models using metrics like **MAE**, **RMSE**, and **R²**.  
+7. **Hyperparameter Tuning** – Optimize model parameters using Grid Search for improved performance.  
+8. **Model Saving** – Persist the final trained model using `pickle` for future predictions.
+
+### Example Results
+
+| Model              | MAE   | RMSE  | R²   |
+|--------------------|-------|-------|------|
+| Linear Regression  | 0.215 | 0.295 | 0.812|
+| Random Forest      | 0.212 | 0.290 | 0.815|
+| XGBoost            | 0.210 | 0.287 | 0.818|
+
+**Key Insights:**  
+- Employees working **OverTime** with low **JobSatisfaction** and fewer **YearsAtCompany** are at higher risk of attrition.  
+- Department and JobRole differences also show notable impact on attrition patterns.
+
+### Technologies Used
+
+- **Python 3.x**  
+- **Pandas, NumPy** – data manipulation  
+- **Scikit-learn** – ML models and preprocessing  
+- **Matplotlib, Seaborn** – visualization  
+- **XGBoost** – advanced gradient boosting model  
+- **Joblib / Pickle** – model persistence
+
+### Notebook & Dataset
+
+- [Full Machine Learning Notebook](https://github.com/Ray99-cpu/Human-Resources/blob/main/Machine_Learning/notebooks/03_ML_Full_Workflow.ipynb)  
+- Dataset: Human Resources employee dataset 
 
 ## Credits
 
@@ -345,3 +450,15 @@ The Power BI dashboard was designed using Balsamiq for wireframing. The main das
 ![hr_dash](visualisations/hr_dash.png)
 
 The dashboard is designed to communicate complex data insights to both technical and non-technical audiences through interactive visualizations, clear KPIs, and drill-down capabilities. Data insights are presented using a combination of charts, tables, and narrative explanations to ensure accessibility for all stakeholders.
+### Dataset
+- [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) from Kaggle.
+- Content and analysis support provided by ChatGPT.
+- Project guidance and facilitation by Emma (facilitator).
+
+## Acknowledgements (optional)
+Thank you to the people who provided support through this project.
+
+* Emma Lamont
+* Spencer
+* Niel
+* The whole team
